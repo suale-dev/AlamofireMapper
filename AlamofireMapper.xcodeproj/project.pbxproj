@@ -10,6 +10,7 @@
 		BA3B0A37212BD7F600A90C48 /* AlamofireMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3B0A2D212BD7F600A90C48 /* AlamofireMapper.framework */; };
 		BA3B0A3C212BD7F600A90C48 /* AlamofireMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3B0A3B212BD7F600A90C48 /* AlamofireMapperTests.swift */; };
 		BA3B0A3E212BD7F600A90C48 /* AlamofireMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3B0A30212BD7F600A90C48 /* AlamofireMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA3B0A48212BD87900A90C48 /* AlamofireMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3B0A47212BD87900A90C48 /* AlamofireMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		BA3B0A36212BD7F600A90C48 /* AlamofireMapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlamofireMapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3B0A3B212BD7F600A90C48 /* AlamofireMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireMapperTests.swift; sourceTree = "<group>"; };
 		BA3B0A3D212BD7F600A90C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3B0A47212BD87900A90C48 /* AlamofireMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		BA3B0A2F212BD7F600A90C48 /* AlamofireMapper */ = {
 			isa = PBXGroup;
 			children = (
+				BA3B0A47212BD87900A90C48 /* AlamofireMapper.swift */,
 				BA3B0A30212BD7F600A90C48 /* AlamofireMapper.h */,
 				BA3B0A31212BD7F600A90C48 /* Info.plist */,
 			);
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					BA3B0A2C212BD7F600A90C48 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					BA3B0A35212BD7F600A90C48 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3B0A48212BD87900A90C48 /* AlamofireMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +344,7 @@
 		BA3B0A42212BD7F600A90C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kesu.AlamofireMapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +370,7 @@
 		BA3B0A43212BD7F600A90C48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +395,7 @@
 		BA3B0A45212BD7F600A90C48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlamofireMapperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +413,7 @@
 		BA3B0A46212BD7F600A90C48 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AlamofireMapperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

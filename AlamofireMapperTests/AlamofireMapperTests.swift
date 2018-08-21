@@ -1,15 +1,16 @@
 //
-//  AlamofireMapperTests.swift
-//  AlamofireMapperTests
+//  AlamofreMapperTests.swift
+//  AlamofreMapperTests
 //
 //  Created by Sua Le on 8/21/18.
 //  Copyright © 2018 Sua Le. All rights reserved.
 //
 
 import XCTest
-@testable import AlamofireMapper
+import Alamofire
+@testable import AlamofreMapper
 
-class AlamofireMapperTests: XCTestCase {
+class AlamofreMapperTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,9 +22,18 @@ class AlamofireMapperTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetListUsers() {
+        Alamofire.request("https://reqres.in/api/users", method: .get
+            , parameters: nil, encoding: URLEncoding.default, headers: nil).responseObject { (response: DataResponse<UserResponse>) in
+                switch response.result {
+                case let .success(data):
+                    dump(data)
+                case let .failure(error):
+                    dump(error)
+                }
+        }
+        
+        assert(true)
     }
     
     func testPerformanceExample() {
