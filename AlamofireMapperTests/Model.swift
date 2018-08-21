@@ -23,3 +23,18 @@ class User: Decodable {
     var last_name: String!
     var avatar: String!
 }
+
+class Movie: Decodable {
+    var id: String!
+    var name: String!
+    var movies: Array<String>!
+    var createdAt: Date?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case movies = "movies[]"
+        case createdAt
+    }
+}
+

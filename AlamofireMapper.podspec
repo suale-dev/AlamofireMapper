@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name = "AlamofireMapper"
   s.version = "1.0.0"
-  s.license = { :type => "MIT", :file => "LICENSE" }
+  s.license = { :type => "MIT"}
   s.summary = "An extension to Alamofire which automatically converts JSON response data into swift objects using Decodeable"
   s.homepage = "https://github.com/sua8051/AlamofireMapper"
   s.author = { "Sua Le" => "sua8051@gmail.com" }
