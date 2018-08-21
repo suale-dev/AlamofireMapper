@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //default key
-        Alamofire.request("https://reqres.in/api/users", method: .get
+        let url1 = "https://raw.githubusercontent.com/sua8051/AlamofireMapper/master/user1.json"
+        Alamofire.request(url1, method: .get
             , parameters: nil, encoding: URLEncoding.default, headers: nil).responseObject { (response: DataResponse<UserResponse>) in
                 switch response.result {
                 case let .success(data):
@@ -26,9 +27,9 @@ class ViewController: UIViewController {
         }
         
         //custom coding key
-        let params: [String: Any] = ["name": "paul rudd", "movies": ["I Love You Man", "Role Models"]]
-        Alamofire.request("https://reqres.in/api/users", method: .post
-            , parameters: params, encoding: URLEncoding.default, headers: nil).responseObject { (response: DataResponse<Movie>) in
+        let url2 = "https://raw.githubusercontent.com/sua8051/AlamofireMapper/master/movie.json"
+        Alamofire.request(url2, method: .get
+            , parameters: nil, encoding: URLEncoding.default, headers: nil).responseObject { (response: DataResponse<Movie>) in
                 switch response.result {
                 case let .success(data):
                     dump(data)
@@ -37,6 +38,17 @@ class ViewController: UIViewController {
                 }
         }
         
+        //response array
+        let url3 = "https://raw.githubusercontent.com/sua8051/AlamofireMapper/master/user2.json"
+        Alamofire.request(url3, method: .get
+            , parameters: nil, encoding: URLEncoding.default, headers: nil).responseObject { (response: DataResponse<[User]>) in
+                switch response.result {
+                case let .success(data):
+                    dump(data)
+                case let .failure(error):
+                    dump(error)
+                }
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
